@@ -1,0 +1,30 @@
+{
+  "name": "rag-from-scratch-js",
+  "version": "1.0.0",
+  "description": "Learn RAG retrieval by reading it: PDFs to chunks to embeddings to Qdrant to semantic search. Plain JavaScript, runs fully local.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "nodemon --watch index.js --watch src --exec node --env-file=.env index.js",
+    "start": "node --env-file=.env index.js",
+    "debug": "node --inspect-brk --env-file=.env index.js ingest",
+    "db:reset": "node --env-file=.env db/reset.js",
+    "db:stop": "node --env-file=.env db/stop.js",
+    "db:start": "node --env-file=.env db/start.js",
+    "setup": "node --env-file=.env db/install.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0",
+    "@qdrant/js-client-rest": "^1.18.0",
+    "pdfjs-dist": "^5.6.205"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

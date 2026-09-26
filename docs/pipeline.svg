@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" width="880" height="320" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#8b949e"/>
+    </marker>
+  </defs>
+
+  <!-- ================= INGEST ROW ================= -->
+  <text x="20" y="28" fill="#8b949e" font-size="12" letter-spacing="1.5">INGEST — runs once</text>
+
+  <g stroke="#58a6ff" stroke-width="1.5" fill="none">
+    <rect x="20"  y="46" width="170" height="78" rx="8"/>
+    <rect x="256" y="46" width="170" height="78" rx="8"/>
+    <rect x="492" y="46" width="170" height="78" rx="8"/>
+    <rect x="700" y="46" width="160" height="78" rx="8"/>
+  </g>
+
+  <g font-size="13" fill="#58a6ff" text-anchor="middle">
+    <text x="105" y="76">4 PDFs</text>
+    <text x="341" y="76">225 chunks</text>
+    <text x="577" y="76">225 vectors</text>
+    <text x="780" y="76">Qdrant</text>
+  </g>
+
+  <g font-size="10.5" fill="#8b949e" text-anchor="middle">
+    <text x="105" y="96">docs/*.pdf</text>
+    <text x="105" y="112">1-pdf/</text>
+
+    <text x="341" y="96">200 words each</text>
+    <text x="341" y="112">2-chunk/</text>
+
+    <text x="577" y="96">384 numbers each</text>
+    <text x="577" y="112">3-embed/</text>
+
+    <text x="780" y="96">cosine index</text>
+    <text x="780" y="112">4-store/</text>
+  </g>
+
+  <g stroke="#8b949e" stroke-width="1.5" marker-end="url(#arrow)">
+    <line x1="192" y1="85" x2="248" y2="85"/>
+    <line x1="428" y1="85" x2="484" y2="85"/>
+    <line x1="664" y1="85" x2="694" y2="85"/>
+  </g>
+
+  <!-- travelling packet -->
+  <circle r="5" fill="#3fb950">
+    <animate attributeName="cx" values="105;341;577;780;780" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="140;140;140;140;140" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;0" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <text y="162" font-size="10" fill="#3fb950" text-anchor="middle">
+    <animate attributeName="x" values="105;341;577;780;780" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;0" dur="5s" repeatCount="indefinite"/>
+    chunk 7
+  </text>
+
+  <!-- ================= SEARCH ROW ================= -->
+  <text x="20" y="212" fill="#8b949e" font-size="12" letter-spacing="1.5">SEARCH — runs per question</text>
+
+  <g stroke="#d29922" stroke-width="1.5" fill="none">
+    <rect x="20"  y="230" width="228" height="66" rx="8"/>
+    <rect x="314" y="230" width="170" height="66" rx="8"/>
+    <rect x="550" y="230" width="310" height="66" rx="8"/>
+  </g>
+
+  <g font-size="13" fill="#d29922">
+    <text x="134" y="258" text-anchor="middle">"how does the decoder work?"</text>
+    <text x="399" y="258" text-anchor="middle">384 numbers</text>
+    <text x="705" y="258" text-anchor="middle">top 3 chunks</text>
+  </g>
+
+  <g font-size="10.5" fill="#8b949e" text-anchor="middle">
+    <text x="134" y="278">your question</text>
+    <text x="399" y="278">same model as ingest</text>
+    <text x="705" y="278">0.4296  ·  0.4289  ·  0.4072</text>
+  </g>
+
+  <g stroke="#8b949e" stroke-width="1.5" marker-end="url(#arrow)">
+    <line x1="250" y1="263" x2="306" y2="263"/>
+    <line x1="486" y1="263" x2="542" y2="263"/>
+  </g>
+
+  <circle r="4.5" fill="#d29922">
+    <animate attributeName="cx" values="134;399;705;705" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="308;308;308;308" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
