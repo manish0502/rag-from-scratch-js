@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+
+  <text x="20" y="26" fill="#8b949e" font-size="12" letter-spacing="1.5">ONE DOCUMENT — 6,511 WORDS</text>
+
+  <!-- the document as one long bar -->
+  <rect x="20" y="42" width="840" height="26" rx="4" fill="none" stroke="#30363d" stroke-width="1.5"/>
+  <g fill="#30363d">
+    <rect x="28"  y="50" width="60" height="10" rx="2"/>
+    <rect x="96"  y="50" width="90" height="10" rx="2"/>
+    <rect x="194" y="50" width="45" height="10" rx="2"/>
+    <rect x="247" y="50" width="105" height="10" rx="2"/>
+    <rect x="360" y="50" width="70" height="10" rx="2"/>
+    <rect x="438" y="50" width="120" height="10" rx="2"/>
+    <rect x="566" y="50" width="55" height="10" rx="2"/>
+    <rect x="629" y="50" width="95" height="10" rx="2"/>
+    <rect x="732" y="50" width="120" height="10" rx="2"/>
+  </g>
+
+  <!-- chunk 7 -->
+  <g>
+    <rect x="120" y="100" width="300" height="42" rx="6" fill="#58a6ff" fill-opacity="0.12" stroke="#58a6ff" stroke-width="1.5"/>
+    <text x="270" y="126" fill="#58a6ff" font-size="12.5" text-anchor="middle">chunk 7  ·  200 words</text>
+    <animate attributeName="opacity" values="0;1;1;1;1" dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- chunk 8, starts 150 words later -->
+  <g>
+    <rect x="345" y="158" width="300" height="42" rx="6" fill="#58a6ff" fill-opacity="0.12" stroke="#58a6ff" stroke-width="1.5"/>
+    <text x="495" y="184" fill="#58a6ff" font-size="12.5" text-anchor="middle">chunk 8  ·  200 words</text>
+    <animate attributeName="opacity" values="0;0;1;1;1" dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- chunk 9 -->
+  <g>
+    <rect x="570" y="216" width="290" height="42" rx="6" fill="#58a6ff" fill-opacity="0.12" stroke="#58a6ff" stroke-width="1.5"/>
+    <text x="715" y="242" fill="#58a6ff" font-size="12.5" text-anchor="middle">chunk 9  ·  200 words</text>
+    <animate attributeName="opacity" values="0;0;0;1;1" dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- overlap 7-8 -->
+  <g>
+    <rect x="345" y="100" width="75" height="100" rx="4" fill="#3fb950" fill-opacity="0.18" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <animate attributeName="opacity" values="0;0;1;1;1" dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- overlap 8-9 -->
+  <g>
+    <rect x="570" y="158" width="75" height="100" rx="4" fill="#3fb950" fill-opacity="0.18" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <animate attributeName="opacity" values="0;0;0;1;1" dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <g>
+    <text x="382" y="276" fill="#3fb950" font-size="11" text-anchor="middle">50 words</text>
+    <text x="382" y="290" fill="#3fb950" font-size="11" text-anchor="middle">shared</text>
+    <animate attributeName="opacity" values="0;0;1;1;1" dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- step arrow -->
+  <g stroke="#8b949e" stroke-width="1.2">
+    <line x1="120" y1="88" x2="345" y2="88"/>
+    <line x1="120" y1="84" x2="120" y2="92"/>
+    <line x1="345" y1="84" x2="345" y2="92"/>
+  </g>
+  <text x="232" y="80" fill="#8b949e" font-size="11" text-anchor="middle">window moves 150 words</text>
+</svg>
